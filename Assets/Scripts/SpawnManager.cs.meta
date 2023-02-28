@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 0b2239a7edde6d34487b5e6515a860bb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Chomper: {fileID: 1613062942570221522, guid: 8833ea5f81907924081ab7f4aec9f634,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
