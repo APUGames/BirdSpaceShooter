@@ -32,5 +32,11 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        else if (other.gameObject.tag == "Player")// make the player tag
+        {
+            other.gameObject.GetComponent<PlayerController>().EnemyDamage();
+        }
     }
+
 }

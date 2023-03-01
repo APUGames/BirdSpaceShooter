@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject Chomper;
 
-    private float spawnRangeX = -11;// fix range and other bonds for bird
+    private float spawnRangeX = -11;// fix range and other bonds for bird 
     private float spawnPosY = 15;
 
     private float startDelay = 2;

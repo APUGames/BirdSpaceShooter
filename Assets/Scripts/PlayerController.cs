@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     // This component will handle player action and state
-    public int health = 100;
-    public float speed = 1.0f;
+    [Header("Attributes")]
+    [SerializeField]
+    private int health;
+    [SerializeField]
+    private float speed;
+    [SerializeField]
+    private float laserSpawnOffset;
+
+    [Header("Player UI")]
+    [SerializeField]
+    private GameObject healthText;
+
+
     public GameObject laserPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
         transform.position = Vector3.zero;
+        healthText.GetComponent<Text>().text = health.ToString();
     }
 
     // Update is called once per frame
@@ -41,10 +54,20 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(-12, transform.position.y, 0f);
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire2"))//change this to the right click
         {
            Instantiate(laserPrefab, transform.position, Quaternion.identity);
         }
 
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        healthText.GetComponent<Text>().text = health.ToString();
+    }
+    public void EnemyDamage()
+    {
+        health -= 1;
     }
 }
