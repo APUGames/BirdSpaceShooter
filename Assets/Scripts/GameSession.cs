@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] private Canvas mainMenuUI;
+    [SerializeField] private Canvas MainMenuUI;
 
     private void Update()
     {
 
         if (SessionHandler.gameStarted)
         {
-            mainMenuUI.enabled = false;
+            MainMenuUI.enabled = false;
         }
 
     }
@@ -20,9 +22,8 @@ public class GameSession : MonoBehaviour
         SessionHandler.gameStarted = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        //PlayerCollisions.stopCam = false;
         Time.timeScale = 1.0f;
-        //SceneManager.LoadMainScene(0);
+        SceneManager.LoadScene(0);
 
 
     }

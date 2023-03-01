@@ -60,6 +60,11 @@ public class PlayerController : MonoBehaviour
         }
 
         UpdateUI();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);//maybe a player death state animation
+        }
     }
 
     private void UpdateUI()
@@ -68,6 +73,10 @@ public class PlayerController : MonoBehaviour
     }
     public void EnemyDamage()
     {
-        health -= 1;
+        if (health >=1)
+        {
+            health -= 1;
+        }
+        
     }
 }
