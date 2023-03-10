@@ -6,26 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] private Canvas MainMenuUI;
+    [SerializeField] private GameObject MainMenuUI;
 
     private void Update()
     {
 
         if (SessionHandler.gameStarted)
         {
-            MainMenuUI.enabled = false;
+            //Debug.Log("set main menu to false");
+            MainMenuUI.SetActive(false);
         }
 
     }
-    public void ReloadGame()
+    public void ReloadGame()//see if this needs be updated for clarification
     {
-        SessionHandler.gameStarted = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        Time.timeScale = 1.0f;
-        SceneManager.LoadScene(0);
-
-
+        SceneManager.LoadScene("MainScene");
     }
 
     public void QuitGame()
@@ -33,4 +28,11 @@ public class GameSession : MonoBehaviour
         Application.Quit();
     }
 
+    public void StartGame()
+    {
+        SessionHandler.gameStarted = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1.0f;
+    }
 }

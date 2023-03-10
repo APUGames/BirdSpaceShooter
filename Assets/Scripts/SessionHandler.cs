@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class SessionHandler : MonoBehaviour
 {
-    [SerializeField] Canvas gameOverUI;
+    [SerializeField] GameObject gameOverUI;
 
     public static bool gameStarted = false;
     public static bool gameOver = false;
 
+    public PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameOverUI.enabled = false;
+        gameOverUI.SetActive(false);
         if (!gameStarted)
         {
             ProcessCommon();
@@ -46,9 +47,19 @@ public class SessionHandler : MonoBehaviour
     }
 
 
-    void ProcessEnd()
+    private void ProcessEnd()
     {
-        gameOverUI.enabled = true;
-        ProcessCommon();
+
+        if (playerController.GetHealth() == 0)// checking the health int
+        {
+            gameOverUI.SetActive(true);
+            ProcessCommon();
+        }
+       
     }
+    //attach session handler to the ui elements??
+
+    //chomper. 10 end
+    
+
 }
