@@ -11,6 +11,7 @@ public class SessionHandler : MonoBehaviour
     public static bool gameOver = false;
 
     public PlayerController playerController;
+    public LaserController laserController;
 
     // Start is called before the first frame update
     void Start()
@@ -56,13 +57,17 @@ public class SessionHandler : MonoBehaviour
             gameOverUI.SetActive(true);
             ProcessCommon();
         }
-        if (playerController.GetHit() == 2)//checking the chomper hits
+
+        //the laser tag only works for each individual laser, wo it only adds opne with the same laser, you'll have to add the compers that are destroyed
+        else if (laserController.GetShot() == 1)//checking to see if laser hits the chomper 2 times
         {
             gameOverUI.SetActive(true);
             ProcessCommon();
         }
         
     }
- 
+
+
+    
 
 }
