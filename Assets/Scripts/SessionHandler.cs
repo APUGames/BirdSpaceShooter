@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SessionHandler : MonoBehaviour
 {
-    [SerializeField] GameObject gameOverUI;
+    [SerializeField] private GameObject gameOverUI;
 
     public static bool gameStarted = false;
     public static bool gameOver = false;
@@ -55,11 +55,12 @@ public class SessionHandler : MonoBehaviour
             gameOverUI.SetActive(true);
             ProcessCommon();
         }
+        //count tag chomper to do and ontigger collider nd make the tag add
        
     }
-    //attach session handler to the ui elements??
 
     //chomper. 10 end
+
     
 
 }
