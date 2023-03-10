@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int health;
     [SerializeField]
+    private int hit;
+    [SerializeField]
     private float speed;
     [SerializeField]
     private float laserSpawnOffset;
@@ -84,6 +86,20 @@ public class PlayerController : MonoBehaviour
     public int GetHealth()
     {
         return health;
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if(collision.gameObject.tag == "Chomper")
+        {
+            hit++;
+        }
+
+    }
+
+    public int GetHit()
+    {
+        return hit;
     }
 
 
