@@ -20,7 +20,7 @@ public class GameSession : MonoBehaviour
     }
     public void ReloadGame()//see if this needs be updated for clarification
     {
-        //SceneManager.LoadScene("MainScene");
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
