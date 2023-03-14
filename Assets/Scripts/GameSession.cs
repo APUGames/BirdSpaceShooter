@@ -18,7 +18,7 @@ public class GameSession : MonoBehaviour
         }
 
     }
-    public void ReloadGame()//see if this needs be updated for clarification
+    public void ReloadGame()
     {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

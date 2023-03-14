@@ -31,6 +31,8 @@ public class EnemyController : MonoBehaviour
         if (other.gameObject.tag == "Laser")
         {
             Destroy(gameObject);
+
+
         }
 
         else if (other.gameObject.tag == "Player")// make the player tag
