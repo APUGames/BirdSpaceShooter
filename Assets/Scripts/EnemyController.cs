@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     //chomper is the enemy
     private float speed = 2f;
+    private bool hit = false;
 
    // private Vector3 baseLocation = new Vector3 (0f, 7.50f, 0f);
 
@@ -30,6 +31,8 @@ public class EnemyController : MonoBehaviour
     {
         if (other.gameObject.tag == "Laser")
         {
+            hit = true;
+            //pointfix code
             Destroy(gameObject);
 
 
@@ -39,6 +42,8 @@ public class EnemyController : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerController>().EnemyDamage();
         }
+
+
     }
 
 }

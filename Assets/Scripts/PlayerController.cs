@@ -46,13 +46,13 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -5, 0f);
         }
-        if (transform.position.x > 7)
+        if (transform.position.x > 9)
         {
-            transform.position = new Vector3(7, transform.position.y, 0f);
+            transform.position = new Vector3(9, transform.position.y, 0f);
         }
-        else if (transform.position.x < -7)
+        else if (transform.position.x < -9)
         {
-            transform.position = new Vector3(-7, transform.position.y, 0f);
+            transform.position = new Vector3(-9, transform.position.y, 0f);
         }
 
         if (Input.GetButtonDown("Fire2"))//change this to the right click
@@ -85,7 +85,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
 
     public int GetHealth()
     {
