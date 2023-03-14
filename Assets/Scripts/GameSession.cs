@@ -13,7 +13,6 @@ public class GameSession : MonoBehaviour
 
         if (SessionHandler.gameStarted)
         {
-            //Debug.Log("set main menu to false");
             MainMenuUI.SetActive(false);
         }
 

@@ -53,20 +53,16 @@ public class SessionHandler : MonoBehaviour
 
     private void ProcessEnd()
     {
+        gameOverUI.SetActive(true);
+        ProcessCommon();
 
+        /*
         if (playerController.GetHealth() == 0)// checking the health int
         {
             gameOverUI.SetActive(true);
             ProcessCommon();
         }
-
-        //the laser tag only works for each individual laser, wo it only adds opne with the same laser, you'll have to add the compers that are destroyed
-        else if (laserController.GetShot() == 1)//checking to see if laser hits the chomper 2 times
-        {
-            gameOverUI.SetActive(true);
-            ProcessCommon();
-        }
-
+        */
 
     }
     

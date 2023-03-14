@@ -8,7 +8,6 @@ public class EnemyController : MonoBehaviour
     private float speed = 2f;
     private bool hit = false;
 
-   // private Vector3 baseLocation = new Vector3 (0f, 7.50f, 0f);
 
     // Start is called before the first frame update
     void Start()
@@ -45,5 +44,6 @@ public class EnemyController : MonoBehaviour
 
 
     }
+    //add kill counter
 
 }
